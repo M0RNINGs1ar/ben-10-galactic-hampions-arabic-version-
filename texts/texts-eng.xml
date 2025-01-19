@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texts>
+	
+	<!--  GENERAL  -->
+	<!--  =======  -->
+	<term key="ContextMenuItems">استديو الشجرة الأرجوانية</term>	<!--  Item de menu contextual customizado (para que no haya menu customizado, borrar esta linea)  -->
+	<term key="frame_label_default">eng</term>
+	<term key="game_title"><![CDATA[<P>أبطال</P><P>المجرة</P> ]]></term>
+	
+	<!--  CHEAT CODES  -->
+	<!--  ===========  -->	
+	
+	<term key="codes-alien-Transylian">1238</term>        
+	<term key="codes-item-Heal_3-10">5671</term>
+	<term key="codes-item-Courage_3-10">1245</term>
+	<term key="codes-item-Hardness_3-10">8759</term>
+	<term key="codes-item-Adrenalin_3-10">2341</term>
+	<term key="codes-item-Recharge_3-10">3386</term>
+	<term key="codes-item-Purify-10">6577</term>
+	<term key="codes-item-Elixir-10">8921</term>
+	<term key="codes-item-Switch-10">2453</term>
+	<term key="codes-item-Revive-10">2176</term>        
+	<term key="codes-gold-500">9827</term>        
+	<term key="codes-xp-2500">7624</term>
+	
+	<!--  SPLASH  -->
+	<!--  ======  -->
+	
+	<term key="code">الرمز</term>
+	<term key="input_code"></term>	
+	
+	<!-- POPULAR TEXTS -->
+	
+	<term key="strength">القوة</term>
+	<term key="defense">الدفاع</term>
+	<term key="agility">السرعة</term>
+	<term key="levelLabel">المستوى</term>
+	<term key="xpLabel">خبرة</term>
+	
+	<term key="retry">إعادة المحاولة</term>
+	<term key="gotomap">الذهاب إلى الخريطة</term>
+	<term key="accept">قبول</term>
+	<term key="cancel">إلغاء</term>
+	<term key="loading">تحميل...</term>
+	
+	<!--  BATTLE LOST  -->
+	<!--  ===========  -->
+	
+	<term key="gameLostTitle">لقد خسرت</term>
+	<term key="gameLostDescriptionQuickBattle">!حاول مجددًا</term>	
+	<term key="gameLostDescriptionTournament">لقد خرجت من البطولة</term>	
+	
+	<!--  BATTLE WON  -->
+	<!--  ===========  -->
+	
+	<term key="gameWonTitle"><![CDATA[!تزف دقل]]></term>
+	<term key="gameWonDescription"><![CDATA[تحسين كائنك الفضائي]]></term>	
+	<term key="gameWonLevelUp">!ترقية</term>
+	
+	<!--  BUY CONFIRMATION  -->
+	<!--  ================  -->
+	
+	<term key="buyConfirmationTitleTrainining">تدريب</term>
+	<term key="buyConfirmationTitleShop">شراء</term>	
+	
+	<!--  FIRST ALIEN SELECTION -->
+	<!--  =====================  -->
+	
+	<term key="firstAlienSelectionTitle"><![CDATA[<P>اختيار</P><P>الكائن الفضائي</P>]]></term>
+	<term key="firstAlienSelectionDescription">اختر كائنًا فضائيًا لخوض المغامرة</term>
+	
+	<!--  FIRST ALIEN CONFIRMATION  -->
+	<!--  ========================  -->
+	
+	<term key="firstAlienConfirmationTitle">تم الاختيار</term>
+	
+	<!--  MAP  -->
+	<!--  ===  -->
+	
+	<term key="mapAreaTraining">تدريب</term>
+	<term key="mapAreaShop">المتجر</term>
+	<term key="mapAreaTournament">البطولة</term>
+	<term key="mapAreaQuickBattle">مواجهة سريعة</term>
+	
+	<!--  MAP REWARD -->
+	<!--  =========  -->
+	
+	<term key="mapRewardTitle">مكافأة</term>
+	
+	<!--  NEW GAME WARNING -->
+	<!--  ================ -->
+	
+	<term key="newGameTitle">تنبيه</term>
+	<term key="newGameDescription"><![CDATA[<P>سيتم مسح تقدمك الحالي</P><P>هل ترغب في المتابعة؟</P>]]></term>
+	
+	<!--  NO GOLD WARNING -->
+	<!--  =============== -->
+	
+	<term key="noGoldTitle">تحتاج إلى المزيد من الذهب</term>
+	<term key="noGoldDescription"><![CDATA[<P>فز بالمواجهات والبطولات</P><P>للحصول عليه</P>]]></term>
+	
+	<!--  SHOP SCREEN -->
+	<!--  =========== -->
+	
+	<term key="shopTitle">المتجر</term>
+	<term key="shopItemsTitle">شراء</term>
+	<term key="shopInventoryTitle">المخزون</term>
+	
+	<term key="Heal_1ShopDescription">يستعيد الحياة</term>	
+	<term key="Heal_2ShopDescription">يستعيد الحياة</term>	
+	<term key="Heal_3ShopDescription">يستعيد الحياة</term>	
+	<term key="Courage_1ShopDescription">يزيد القوة</term>	
+	<term key="Courage_2ShopDescription">يزيد القوة</term>	
+	<term key="Courage_3ShopDescription">يزيد القوة</term>	
+	<term key="Hardness_1ShopDescription">يزيد الدفاع</term>	
+	<term key="Hardness_2ShopDescription">يزيد الدفاع</term>	
+	<term key="Hardness_3ShopDescription">يزيد الدفاع</term>	
+	<term key="Adrenalin_1ShopDescription">يزيد السرعة</term>	
+	<term key="Adrenalin_2ShopDescription">يزيد السرعة</term>	
+	<term key="Adrenalin_3ShopDescription">يزيد السرعة</term>	
+	<term key="Recharge_1ShopDescription">يستعيد الطاقة</term>	
+	<term key="Recharge_2ShopDescription">يستعيد الطاقة</term>	
+	<term key="Recharge_3ShopDescription">يستعيد الطاقة</term>	
+	<term key="ElixirShopDescription">يستعيد الطاقة والسحر</term>		
+	
+	
+	<term key="PurifyShopDescription">يزيل الآثار الضارة</term>	
+	<term key="SwitchShopDescription">استخدمه لتغيير كائناتك الفضائية  </term>
+	<term key="ReviveShopDescription">يستعيد الكائنات الفضائية الهالكة</term>
+	
+	<!--  TEAM SCREEN -->
+	<!--  =========== -->
+	
+	<term key="teamScreenTitle">اختر فريقك</term>
+	
+	<!--  TOURNAMENT CARDS SCREEN -->
+	<!--  ======================= -->
+	
+	<term key="cardsScreenTitle">الأبطال بطاقات</term>
+	
+	<!--  TRAINING SCREEN -->
+	<!--  =============== -->
+	
+	<term key="trainingDescription">درب كائناتك الفضائية وقُدها إلى القمة</term>
+	<term key="trainingTrainstat">التدريب</term>
+	
+	<!--  FIXTURE SCREEN -->
+	<!--  =============== -->
+
+	<term key="fixturePlayer">اللاعب</term>
+	<term key="fixtureTournamentWon"><![CDATA[<P>!فائز</P>]]></term>
+	
+	<!--  TOURNAMENT SELECTION SCREEN -->
+	<!--  =========================== -->
+
+	<term key="tournamentSubtitle">اربح جميع البطولات</term>
+	<term key="tournamentWon">فزت بالفعل</term>
+	<term key="tournamentRequirement">المطلوب</term>
+	<term key="tournamentRequirements">متطلبات</term>
+	<term key="tournamentReward">مكافأة</term>
+	<term key="tournamentRewards">مكافآت</term>
+	
+	
+	<!--  WATCH SELECTION SCREEN -->
+	<!--  ====================== -->
+	
+	<term key="watchSelectionTitle1">ساعة</term>
+	<term key="watchSelectionTitle2">البطل</term>
+	<term key="watchSelectionSubtitle">اختر ساعتك</term>
+	
+	<!--  MAIN MENU  -->
+	<!--  =========  -->	
+	<term key="splashNewGame">مباراة جديدة</term>	
+	<term key="splashContinue">متابعة</term>		
+	
+	<!--  HUD  -->
+	<!--  ===  -->
+	
+	<term key="HUDPause">إيقاف مؤقت</term>
+	
+	<!--  EXIT POPUP  -->
+	<!--  ==========  -->
+	
+	<term key="exit_text">هل ترغب بالتأكيد في الانسحاب من هذه المواجهة؟</term>
+	<term key="exit_no">لا</term>
+	<term key="exit_yes">نعم</term>
+	
+	<!--  VERSUS SCREEN  -->
+	<!--  =============  -->
+	
+	<term key="versusFight">المواجهة</term>
+	<term key="versusQuickFight">مواجهة سريعة</term>
+	
+	<!--  BATTLE HUD  -->
+	<!--  ==========  -->
+	
+	<term key="SkillsDisplayerAttackLabel">الهجوم</term>
+	<term key="SkillsDisplayerDefenseLabel">الدفاع</term>
+	<term key="CriticalHit"><![CDATA[!ضربة خطيرة]]></term>
+	<term key="MissHit">!أخطأت الهدف</term>
+		
+	<term key="AliensMenuTitle">اختيار الكائن الفضائي</term>
+	<term key="AliensMenuTitleDefeat">اختر كا\نك الفضائي التالي</term>
+	
+	<term key="ActionsMenuAttack">الهجوم</term>
+	<term key="ActionsMenuDefense">الدفاع</term>
+	<term key="ActionsMenuItem">العنصر</term>
+	
+	<term key="SwapButtonsTitle">الكائنات الفضائية</term>
+	
+	
+	
+	<!--  ALIENS NAMES  -->
+	<!--  ============  -->
+	
+	<term key="InsectoidName">انسكتويد</term>
+	<term key="NosedeenianName">نوسدينيان</term>	
+	<term key="TetramandName">تيتراماند</term>
+	<term key="PyroniteName">بايرونايت</term>
+	<term key="KinceleranName">كنسيليران</term>
+	<term key="MethanosianName">ميثانوسان</term>
+	<term key="PelarotaAlburianoName">بيلاروتا آربوريان </term>
+	<term key="AppoplexianName">أبوبلكسيان</term>
+	<term key="TalpaedanName">تالبيديان</term>
+	<term key="OrishanName">أوريشان</term>
+	<term key="VaxasaurianoName">فاكساسوريان</term>
+	<term key="GeocheloneAerioName">جيوشلون أيرو</term>
+	<term key="AracnochimpanceName">أراكنوتشمبس</term>
+	<term key="NecrofriggianoName">نيكروفريجينو</term>
+	<term key="GourmandName">جورمند</term>
+	<term key="ConductoidName">كوندكتويد</term>
+	<term key="GimlinopithecusName">جيملنيوبثيكوس</term>
+	<term key="AerofibioName">آيروفيبيو</term>
+	<term key="SegmentasapienName">سيجمنتاسابين</term>
+	<term key="TerradinoName">تيرادينو</term>
+	<term key="GalileanName">جاليليان</term>
+	<term key="EctonuriteName">إكتونيورايت</term>
+	<term key="LoboanName">لوبوان</term>
+	<term key="ThepKhufanName">ثيب كوفان</term>
+	<term key="TransylianName">ترانسيليان</term>
+	<term key="SplixsonName">سبلكسون</term>
+
+	
+	<!--  SKILLS NAMES  -->
+	<!--  ============  -->
+		
+	<!-- Insectoid -->
+	
+	<term key="InsectoidAttack1">خدش</term>	
+	<term key="InsectoidAttack2">كرة البلازما</term>	
+	<term key="InsectoidAttack3">المخالب السامة</term>		
+	
+	<term key="InsectoidDefense1">صد</term>	
+	<term key="InsectoidDefense2">درع البلازما</term>	
+	
+	<!-- Nosedeenian -->
+	
+	<term key="NosedeenianAttack1">لكمة</term>	
+	<term key="NosedeenianAttack2">البرق الصاعق</term>	
+	<term key="NosedeenianAttack3">لكمة سونيك</term>
+		
+	<term key="NosedeenianDefense1">صد</term>	
+	<term key="NosedeenianDefense2">صد</term>		
+	
+	<!-- Tetramand -->
+	
+	<term key="TetramandAttack1">لكمة</term>
+	<term key="TetramandAttack2">التجديد</term>
+	<term key="TetramandAttack3">تجميد</term>
+	<term key="TetramandAttack4">لكمة لكمة أخيرة</term>
+	
+	<term key="TetramandDefense1">صد</term>
+	<term key="TetramandDefense2">تجميد</term>
+	<term key="TetramandDefense3">الهجوم الأخير</term>	
+	
+	<!-- Pyronite -->
+	
+	<term key="PyroniteAttack1">لكمة</term>
+	<term key="PyroniteAttack2">كرة النار</term>
+	<term key="PyroniteAttack3">القبضة الحارقة</term>
+	<term key="PyroniteAttack4">إعصار النار</term>
+	
+	<term key="PyroniteDefense1">صد</term>
+	<term key="PyroniteDefense2">أدرنالين</term>
+	<term key="PyroniteDefense3">جدار اللهب</term>	
+	
+	
+	
+	
+	
+	<!-- Vaxasauriano -->
+	
+	<term key="VaxasaurianoAttack1">لكمة</term>
+	<term key="VaxasaurianoAttack2">هزة أرضية</term>
+	<term key="VaxasaurianoAttack3">زلزال</term>
+	<term key="VaxasaurianoAttack4">قوة مفرطة</term>
+	
+	<term key="VaxasaurianoDefense1">صد</term>
+	<term key="VaxasaurianoDefense2">زئير</term>
+	<term key="VaxasaurianoDefense3">نمو</term>	
+	
+	
+	
+	<!-- Aracnochimpance -->
+	
+	<term key="AracnochimpanceAttack1">لكمة</term>
+	<term key="AracnochimpanceAttack2">شبكة العنكبوت</term>
+	<term key="AracnochimpanceAttack3">القبضات الفولاذية</term>	
+	
+	<term key="AracnochimpanceDefense1">صد</term>
+	<term key="AracnochimpanceDefense2">الرداء الحريري</term>
+	<term key="AracnochimpanceDefense3">صرخة الحرب</term>
+	
+	
+	<!-- Necrofriggiano -->
+	
+	<term key="NecrofriggianoAttack1">لكمة</term>
+	<term key="NecrofriggianoAttack2">قذف</term>
+	<term key="NecrofriggianoAttack3">صقيع</term>
+	<term key="NecrofriggianoAttack4">اللهب الجليدي</term>
+	
+	<term key="NecrofriggianoDefense1">صد</term>
+	<term key="NecrofriggianoDefense2">اندفاع</term>
+	<term key="NecrofriggianoDefense3">الاختفاء</term>
+	<term key="NecrofriggianoDefense4">الجدار الجليدي</term>
+	
+	<!-- Gourmand -->
+	
+	<term key="GourmandAttack1">لكمة</term>
+	<term key="GourmandAttack2">لعق</term>
+	<term key="GourmandAttack3">امتصاص</term>
+	<term key="GourmandAttack4">كرة متفجرة</term>
+	
+	<term key="GourmandDefense1">صد</term>
+	<term key="GourmandDefense2">هضم</term>
+	<term key="GourmandDefense3">استرداد القوة</term>	
+	
+	<!-- Conductoid -->
+	
+	<term key="ConductoidAttack1">لكمة</term>
+	<term key="ConductoidAttack2">امتصاص</term>
+	<term key="ConductoidAttack3">إطلاق الكهرباء</term>
+	<term key="ConductoidAttack4">إطلاق الطاقة</term>
+	
+	<term key="ConductoidDefense1">صد</term>
+	<term key="ConductoidDefense2">إعادة الشحن</term>
+	<term key="ConductoidDefense3">بطانية كهربائية</term>	
+	
+	
+	<!-- Transylian -->
+	
+	<term key="TransylianAttack1">لكمة</term>
+	<term key="TransylianAttack2">القبضات الكهربائية</term>
+	<term key="TransylianAttack3">تكنوكينسيس </term>
+	
+	<term key="TransylianDefense1">صد</term>
+	<term key="TransylianDefense2">صد</term>
+	<term key="TransylianDefense3">الجذب المغناطيسي</term>	
+	
+	<!-- Splixson -->
+	
+	<term key="SplixsonAttack1">خدش</term>
+	<term key="SplixsonAttack2">الاستنساخ</term>
+	<term key="SplixsonAttack3">الشبكة الحسية</term>
+	
+	<term key="SplixsonDefense1">صد</term>
+	<term key="SplixsonDefense2">تسارع</term>
+	
+	
+	<!--  EFFECTS NAMES  -->
+	
+	<term key="Effect_Heal">شفاء</term>
+	<term key="Effect_Poison">سُم</term>
+	<term key="Effect_HP_regeneration">تجديد</term>
+	<term key="Effect_Purify">تطهير</term>
+	<term key="Effect_Recharge">إعادة شحن</term>
+	<term key="Effect_Trapped">محتجز</term>
+	<term key="Effect_Burn">إشعال</term>
+	<term key="Effect_Taunt">استهزاء</term>
+	<term key="Effect_Drain">استنزاف</term>
+	<term key="Effect_Paralyze">شل حركة</term>
+	<term key="Effect_Wipe">عصائر بسيطة</term>
+	
+	<!--  ITEM NAMES  -->	
+
+	<term key="Item_Heal_1_Name">عصائر خاصة</term>
+	<term key="Item_Heal_2_Name">عصائر ذهبية</term>
+	<term key="Item_Heal_3_Name">قوة تيرانوبيد</term>
+	
+	<term key="Item_Courage_1_Name">قوة سلاموورم</term>
+	<term key="Item_Courage_2_Name">قوة كرابدوزر</term>
+	<term key="Item_Courage_3_Name">بروتك بسيط</term>
+	
+	<term key="Item_Hardness_1_Name">بروتك فضي</term>
+	<term key="Item_Hardness_2_Name">بروتك ذهبي</term>
+	<term key="Item_Hardness_3_Name">سرعة رانكولا</term>
+	
+	<term key="Item_Adrenalin_1_Name">سرعة باغليزارد</term>
+	<term key="Item_Adrenalin_2_Name">سرعة بانوشيان</term>
+	<term key="Item_Adrenalin_3_Name">كوروديوم بسيط</term>
+	
+	<term key="Item_Recharge_1_Name">كوروديوم مضاعف</term>
+	<term key="Item_Recharge_2_Name">كوروديوم ثلاثي</term>
+	<term key="Item_Recharge_3_Name">أمبر أوغيا</term>
+	
+	<term key="Item_Purify_Name">هيليكسر هوكستار</term>
+	
+	<term key="Item_Elixir_Name">الحصانة</term>
+	
+	<term key="Item_Invulnerability_Name">نقاط خبرة إضافية</term>
+	
+	<term key="Item_Bonusxp_Name">ذهب إضافي</term>
+	<term key="Item_Bonusgold_Name">بروتك</term>
+	
+	<term key="Item_SwitchE_Name">زهرة الطاقة</term>
+	<term key="Item_Switch_Name">اومنيتريكس </term>
+	
+	<term key="Item_Revive_Name">غالفن تك</term>
+	<term key="Item_Doubleaction_Name">بطولة بيبتوس 11</term>
+	
+	<!--  TOURNAMENT NAMES  -->	
+	
+	<term key="Tournament1_Name">بطولة أراكنا</term>
+	<term key="Tournament2_Name">بطولة ترانسيل</term>
+	<term key="Tournament3_Name">بطولة ميثانوس</term>
+	<term key="Tournament4_Name">بطولة مايكديلدي</term>
+	<term key="Tournament5_Name">بطولة ترمنيوس 3</term>
+	<term key="Tournament6_Name">بطولة أنودين</term>
+	<term key="Tournament7_Name">بطولة فيلاجاكسيا</term>	
+	<term key="Tournament8_Name">بطولة فيلجاكسيا</term>
+	
+	<!--  WATCHES NAMES  -->	
+	
+	<term key="Watch1Name">الأورجواني الشرير</term>
+	<term key="Watch2Name">الأصفر الشرير</term>
+	<term key="Watch3Name">الأزرق الشرير</term>
+	<term key="Watch4Name">أحمر</term>
+	
+	<term key="Watch5Name">أرجواني</term>
+	<term key="Watch6Name">أصفر</term>
+	<term key="Watch7Name">أزرق</term>
+	<term key="Watch8Name">جورمند</term>
+	
+	<!--  <term key="Watch1Name">evil rot</term> -->
+	<!-- <term key="Watch2Name">evil purple</term> -->
+	<!-- <term key="Watch3Name">evil yellow</term> -->
+	<!-- <term key="Watch4Name">evil blue</term> -->
+	
+	<!-- <term key="Watch5Name">rot</term> -->
+	<!-- <term key="Watch6Name">purple</term> -->
+	<!-- <term key="Watch7Name">yellow</term> -->
+	<!-- <term key="Watch8Name">blue</term> -->
+	
+	<!--  CARDS NAMES  -->	
+	
+	<term key="Card1Name">أراكنوتشمب</term>
+	<term key="Card2Name">أراكنوتشمبس</term>
+	<term key="Card3Name">ناري</term>
+	<term key="Card4Name">بايرونيت</term>
+	
+	<term key="Card5Name">تيتراماند</term>	
+	<term key="Card6Name">كوندكتويد</term>
+	<term key="Card7Name">فاكساساوريان</term>	
+	<term key="Card8Name">فاكساسوريان</term>
+	
+	<!-- TUTORIAL TEXTS -->
+	
+	<term key="TutorialStepIntroText"><![CDATA[أهلا بكم في لعبة أبطال المجرة]]></term>	
+	<term key="TutorialStepWatchText"><![CDATA[اختر جهاز كائنك الفضائي]]></term>	
+	<term key="TutorialStepAlienText">أحسنت الاختيار! حدد الكائن الفضائي الأول</term>
+	<term key="TutorialStepFightText">هل أنت مستعد لخوض معركتك الأولى؟</term>	
+	<term key="TutorialStepTrainingText"><![CDATA[!ىلوألا ةلوطبلا يف لتاق]]></term>
+	<term key="TutorialStepTournamentText"><![CDATA[!ىلوألا ةلوطبلاب تزف دقل !انيناهت]]></term>
+	<term key="TutorialStepCongratulationsText"><![CDATA[text]]></term>
+	<term key="TutorialStepCongratulations2Text"><![CDATA[ةرماغملل دادعتسا ىلع تنأ]]></term>	
+	
+	
+</texts>
