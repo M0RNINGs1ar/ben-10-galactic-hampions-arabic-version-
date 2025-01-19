@@ -5,14 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben 10 Galactic Champions - Arabic Version</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <style>
+        /* Basic Reset */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Full-screen black background */
+        body {
+            background-color: #000;
+            color: #fff; /* White text on black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Style for the title */
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffcc00; /* Gold color for the title */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5); /* Subtle glowing effect */
+        }
+
+        /* Container for the game with border */
+        #game-container {
+            width: 800px;
+            height: 600px;
+            background-color: #111; /* Dark background for the game frame */
+            border: 10px solid #ffcc00; /* Gold border around the game */
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.5); /* Soft glowing effect */
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Style the loading text */
+        .loading-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-top: 10px;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Ben 10 Galactic Champions Flash Game - Arabic Version</h1>
+    <h1>Ben 10 Galactic Champions - Arabic Version</h1>
 
-    <div id="game-container" style="width: 800px; height: 600px;">
+    <div id="game-container">
         <!-- The game will be loaded by Ruffle in this container -->
     </div>
+
+    <div class="loading-text">Loading game...</div>
 
     <script>
         // Initialize Ruffle and load the SWF file from the GitHub Pages URL
@@ -21,9 +72,14 @@
             var ruffle = window.RufflePlayer.newest();
             var player = ruffle.createPlayer();
             gameContainer.appendChild(player);
-            
-            // Use the raw GitHub URL to load the SWF file
-            player.load("https://raw.githubusercontent.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/main/game.swf");
+
+            // Load the game SWF from the GitHub URL
+            player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf");
+
+            // Remove the loading text once the game is loaded
+            player.addEventListener('load', function() {
+                document.querySelector('.loading-text').style.display = 'none';
+            });
         });
     </script>
 
