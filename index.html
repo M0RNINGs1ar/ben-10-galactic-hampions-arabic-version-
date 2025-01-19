@@ -12,10 +12,7 @@
     <h1>Galactic Champions Flash Game</h1>
 
     <div id="game-container" style="width: 800px; height: 600px;">
-        <!-- Embed the Flash game using the SWF file -->
-        <object type="application/x-shockwave-flash" data="game.swf" width="800" height="600">
-            <param name="movie" value="game.swf">
-        </object>
+        <!-- The game will be loaded by Ruffle in this container -->
     </div>
 
     <script>
@@ -25,7 +22,7 @@
             var ruffle = window.RufflePlayer.newest();
             var player = ruffle.createPlayer();
             gameContainer.appendChild(player);
-            player.load("game.swf"); // Ensure correct path to the SWF file
+            player.load("game.swf"); // Make sure the SWF file is in the correct path
         });
     </script>
 
