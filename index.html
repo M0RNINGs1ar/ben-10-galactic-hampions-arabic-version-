@@ -16,13 +16,15 @@
     </div>
 
     <script>
-        // Initialize Ruffle and load the SWF file
+        // Initialize Ruffle and load the SWF file from the external URL
         window.addEventListener('load', function() {
             var gameContainer = document.getElementById('game-container');
             var ruffle = window.RufflePlayer.newest();
             var player = ruffle.createPlayer();
             gameContainer.appendChild(player);
-            player.load("game.swf"); // Make sure the SWF file is in the correct path
+            
+            // Replace the local file path with the external URL
+            player.load("https://emea.iframed.cn.dmti.cloud/content/575/game/%D8%A7%D9%94%D8%A8%D8%B7%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A9/ab/galactic-champions-ar/game.swf");
         });
     </script>
 
