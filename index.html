@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galactic Champions Flash Game</title>
-    <!-- Include Ruffle Web Player from CDN -->
+    <title>Ben 10 Galactic Champions - Arabic Version</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
 
-    <h1>Galactic Champions Flash Game</h1>
+    <h1>Ben 10 Galactic Champions Flash Game - Arabic Version</h1>
 
     <div id="game-container" style="width: 800px; height: 600px;">
         <!-- The game will be loaded by Ruffle in this container -->
     </div>
 
     <script>
-        // Initialize Ruffle and load the SWF file from the external URL
+        // Initialize Ruffle and load the SWF file from the GitHub Pages URL
         window.addEventListener('load', function() {
             var gameContainer = document.getElementById('game-container');
             var ruffle = window.RufflePlayer.newest();
             var player = ruffle.createPlayer();
             gameContainer.appendChild(player);
             
-            // Replace the local file path with the external URL
-            player.load("https://emea.iframed.cn.dmti.cloud/content/575/game/أبطال-المجرة/ab/galactic-champions-ar/game.swf");
+            // Correct the URL to your hosted SWF file in GitHub Pages
+            player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game/game.swf");
         });
     </script>
 
