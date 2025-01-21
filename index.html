@@ -3,80 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>games</title>
+    <title>Games</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <style>
-        /* Basic Reset */
-        body, h1, p, nav {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        /* Full-screen black background */
-        body {
-            background-color: #000;
-            color: #fff; /* White text on black background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            text-align: center;
-        }
-
-        /* Style for the title */
-        h1 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #ffcc00; /* Gold color for the title */
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5); /* Subtle glowing effect */
-        }
-
-        /* Navigation Bar Styling */
-        nav {
-            margin: 20px 0;
-        }
-
-        nav a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Game container with border */
-        .game-container {
-            width: 550px;
-            height: 400px;
-            background-color: #111; /* Dark background for the game frame */
-            border: 10px solid #ffcc00; /* Gold border around the game */
-            box-shadow: 0 0 20px rgba(255, 255, 0, 0.5); /* Soft glowing effect */
-            padding: 10px;
-            margin-top: 20px;
-            display: none; /* Initially hide both game sections */
-        }
-
-        /* Display active game */
-        .active {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
 
-    <h1>Flash Games: Ben 10 and Anime Battle</h1>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="javascript:void(0)" onclick="showGame('ben10')">Ben 10 Galactic Champions</a>
-        <a href="javascript:void(0)" onclick="showGame('animebattle')">Anime Battle 2.2</a>
-    </nav>
+    <!-- Dynamic Title for the game -->
+    <h1 id="gameTitle">Flash Games</h1>
 
     <!-- Game 1: Ben 10 -->
     <div id="ben10" class="game-container">
@@ -102,15 +36,30 @@
                 var player = ruffle.createPlayer();
                 animeBattleContainer.appendChild(player);
 
-                // Load the Anime Battle 2.2 SWF game
+                // Load the Anime Battle 2.2 SWF game from the provided URL
                 player.load("https://w8.snokido.com/games/flash/anime-battle-2/game.swf");
             });
         </script>
     </div>
 
+    <!-- Game names with links below -->
+    <div class="game-names">
+        <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions : Arabic edition</a>
+        <a href="javascript:void(0)" onclick="showGame('animebattle')" class="game-link">Anime Battle 2.2</a>
+    </div>
+
     <script>
-        // Function to display the game selected
+        // Function to display the selected game and update title dynamically
         function showGame(game) {
+            // Update the title dynamically based on the selected game
+            if (game === 'ben10') {
+                document.title = "Ben 10 Galactic Champions"; // Update the browser tab title
+                document.getElementById('gameTitle').textContent = "Ben 10 Galactic Champions : Arabic edition"; // Update game title on page
+            } else if (game === 'animebattle') {
+                document.title = "Anime Battle 2.2"; // Update the browser tab title
+                document.getElementById('gameTitle').textContent = "Anime Battle 2.2"; // Update game title on page
+            }
+
             // Hide both games
             document.getElementById('ben10').classList.remove('active');
             document.getElementById('animebattle').classList.remove('active');
