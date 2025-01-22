@@ -43,16 +43,16 @@
     </div>
 
     <!-- Game 3: DBZ Devolution 1.2.3 -->
-    <div id="DBZ Devolution 1.2.3" class="game-container">
+    <div id="dbzDevolution" class="game-container">
         <script>
             window.addEventListener('load', function() {
-                var animeBattleContainer = document.getElementById('animebattle');
+                var dbzDevolutionContainer = document.getElementById('dbzDevolution');
                 var ruffle = window.RufflePlayer.newest();
                 var player = ruffle.createPlayer();
-                animeBattleContainer.appendChild(player);
+                dbzDevolutionContainer.appendChild(player);
 
-                // Load the Anime Battle 2.2 SWF game from the provided URL
-                player.load("https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf");
+                // Load the DBZ Devolution SWF game from the provided URL
+                player.load("https://www.newgrounds.com/portal/view/590695");  <!-- Replace this URL with the correct URL for DBZ Devolution -->
             });
         </script>
     </div>
@@ -61,7 +61,7 @@
     <div class="game-names">
         <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions : Arabic edition</a>
         <a href="javascript:void(0)" onclick="showGame('animebattle')" class="game-link">Anime Battle 2.2</a>
-        <a href="javascript:void(0)" onclick="showGame('animebattle')" class="game-link">DBZ Devolution 1.2.3</a>
+        <a href="javascript:void(0)" onclick="showGame('dbzDevolution')" class="game-link">DBZ Devolution 1.2.3</a>
     </div>
 
     <script>
@@ -74,23 +74,23 @@
             } else if (game === 'animebattle') {
                 document.title = "Anime Battle 2.2"; // Update the browser tab title
                 document.getElementById('gameTitle').textContent = "Anime Battle 2.2"; // Update game title on page
-            } else if (game === 'DBZ Devolution 1.2.3') {
+            } else if (game === 'dbzDevolution') {
                 document.title = "DBZ Devolution 1.2.3"; // Update the browser tab title
                 document.getElementById('gameTitle').textContent = "DBZ Devolution 1.2.3"; // Update game title on page
             }
 
-            // Hide both games
+            // Hide all games
             document.getElementById('ben10').classList.remove('active');
             document.getElementById('animebattle').classList.remove('active');
-            document.getElementById('DBZ Devolution 1.2.3').classList.remove('active');
+            document.getElementById('dbzDevolution').classList.remove('active');
 
             // Show the selected game
             if (game === 'ben10') {
                 document.getElementById('ben10').classList.add('active');
             } else if (game === 'animebattle') {
                 document.getElementById('animebattle').classList.add('active');
-            } else if (game === 'animebattle') {
-                document.getElementById('DBZ Devolution 1.2.3').classList.add('active');
+            } else if (game === 'dbzDevolution') {
+                document.getElementById('dbzDevolution').classList.add('active');
             }
         }
 
