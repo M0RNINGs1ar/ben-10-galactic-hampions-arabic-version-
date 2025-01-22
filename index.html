@@ -4,49 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Games</title>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
-<body class="light"> <!-- Default to light mode -->
-
-    <!-- Dark/Light Mode Toggle Icon -->
-    <div id="modeToggle" class="mode-toggle">
-        <img id="modeIcon" src="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/light%20mode.svg?raw=true" alt="Light Mode">
+<body>
+    <!-- Header with Dark/Light Mode Toggle Icon -->
+    <div class="header">
+        <h1 id="gameTitle">Flash Games</h1>
+        <div class="mode-toggle" id="modeToggle">
+            <span id="modeIcon">🌙</span>
+        </div>
     </div>
 
-    <!-- Game Title -->
-    <h1 id="gameTitle">Flash Games</h1>
-
-    <!-- Game Containers -->
+    <!-- Game 1: Ben 10 -->
     <div id="ben10" class="game-container">
-        <object type="application/x-shockwave-flash" data="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf?raw=true" width="800" height="600">
-            <param name="movie" value="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf?raw=true">
-            <param name="quality" value="high">
-            <param name="bgcolor" value="#ffffff">
-            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
-        </object>
+        <script>
+            window.addEventListener('load', function() {
+                var ben10Container = document.getElementById('ben10');
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    ben10Container.appendChild(player);
+                    player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf");
+                } else {
+                    ben10Container.innerHTML = `
+                        <object type="application/x-shockwave-flash" data="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf" width="800" height="600">
+                            <param name="movie" value="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#ffffff">
+                            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                        </object>
+                    `;
+                }
+            });
+        </script>
     </div>
 
+    <!-- Game 2: Anime Battle 2.2 -->
     <div id="animebattle" class="game-container">
-        <object type="application/x-shockwave-flash" data="https://w8.snokido.com/games/flash/anime-battle-2/game.swf" width="800" height="600">
-            <param name="movie" value="https://w8.snokido.com/games/flash/anime-battle-2/game.swf">
-            <param name="quality" value="high">
-            <param name="bgcolor" value="#ffffff">
-            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
-        </object>
+        <script>
+            window.addEventListener('load', function() {
+                var animeBattleContainer = document.getElementById('animebattle');
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    animeBattleContainer.appendChild(player);
+                    player.load("https://w8.snokido.com/games/flash/anime-battle-2/game.swf");
+                } else {
+                    animeBattleContainer.innerHTML = `
+                        <object type="application/x-shockwave-flash" data="https://w8.snokido.com/games/flash/anime-battle-2/game.swf" width="800" height="600">
+                            <param name="movie" value="https://w8.snokido.com/games/flash/anime-battle-2/game.swf">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#ffffff">
+                            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                        </object>
+                    `;
+                }
+            });
+        </script>
     </div>
 
+    <!-- Game 3: DBZ Devolution -->
     <div id="dbzDevolution" class="game-container">
-        <iframe src="https://www.newgrounds.com/portal/view/590695" width="800" height="600"></iframe>
+        <script>
+            window.addEventListener('load', function() {
+                var dbzDevolutionContainer = document.getElementById('dbzDevolution');
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    dbzDevolutionContainer.appendChild(player);
+                    player.load("https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf");
+                } else {
+                    dbzDevolutionContainer.innerHTML = `
+                        <object type="application/x-shockwave-flash" data="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf" width="800" height="600">
+                            <param name="movie" value="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#ffffff">
+                            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                        </object>
+                    `;
+                }
+            });
+        </script>
     </div>
 
-    <!-- Game Links -->
+    <!-- Game names with links below -->
     <div class="game-names">
-        <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions: Arabic edition</a>
+        <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions</a>
         <a href="javascript:void(0)" onclick="showGame('animebattle')" class="game-link">Anime Battle 2.2</a>
         <a href="javascript:void(0)" onclick="showGame('dbzDevolution')" class="game-link">DBZ Devolution</a>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Function to display the selected game
+        function showGame(game) {
+            if (game === 'ben10') {
+                document.title = "Ben 10 Galactic Champions"; 
+                document.getElementById('gameTitle').textContent = "Ben 10 Galactic Champions";
+            } else if (game === 'animebattle') {
+                document.title = "Anime Battle 2.2";
+                document.getElementById('gameTitle').textContent = "Anime Battle 2.2";
+            } else if (game === 'dbzDevolution') {
+                document.title = "DBZ Devolution";
+                document.getElementById('gameTitle').textContent = "DBZ Devolution";
+            }
+
+            // Hide all games and show the selected game
+            document.getElementById('ben10').style.display = 'none';
+            document.getElementById('animebattle').style.display = 'none';
+            document.getElementById('dbzDevolution').style.display = 'none';
+
+            document.getElementById(game).style.display = 'block';
+        }
+
+        // Show the Ben 10 game by default
+        window.onload = function() {
+            showGame('ben10');
+        };
+
+        // Dark/Light mode toggle functionality
+        document.getElementById('modeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+
+            const modeIcon = document.getElementById('modeIcon');
+            if (document.body.classList.contains('dark')) {
+                modeIcon.textContent = '🌙';  // Dark mode icon
+            } else {
+                modeIcon.textContent = '🌞';  // Light mode icon
+            }
+        });
+    </script>
 </body>
 </html>
