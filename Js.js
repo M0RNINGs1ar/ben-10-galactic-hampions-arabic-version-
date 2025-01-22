@@ -31,10 +31,14 @@ document.getElementById('modeToggle').addEventListener('click', function() {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
 
+   document.getElementById('modeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+
     const modeIcon = document.getElementById('modeIcon');
     if (document.body.classList.contains('dark')) {
-        modeIcon.textContent = '🌙';  // Dark mode icon
+        modeIcon.src = 'https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/dark%20mode.svg?raw=true';
     } else {
-        modeIcon.textContent = '🌞';  // Light mode icon
+        modeIcon.src = 'https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/light%20mode.svg?raw=true';
     }
-};
+});
