@@ -13,12 +13,12 @@ function showGame(game) {
     }
 
     // Hide all games first
-    document.getElementById('ben10').style.visibility = 'hidden';
-    document.getElementById('animebattle').style.visibility = 'hidden';
-    document.getElementById('dbzDevolution').style.visibility = 'hidden';
+    document.getElementById('ben10').style.display = 'none';
+    document.getElementById('animebattle').style.display = 'none';
+    document.getElementById('dbzDevolution').style.display = 'none';
 
     // Then show the selected game
-    document.getElementById(game).style.visibility = 'visible';
+    document.getElementById(game).style.display = 'block';
 }
 
 // Show the Ben 10 game by default when the page loads
