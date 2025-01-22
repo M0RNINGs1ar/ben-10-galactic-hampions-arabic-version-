@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script> <!-- Ruffle player for Flash support -->
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
 </head>
 <body>
+
+    <!-- Dark/Light Mode Toggle Icon -->
+    <div id="modeToggle" class="mode-toggle" onclick="toggleMode()">🌙</div>
 
     <!-- Dynamic Title for the game -->
     <h1 id="gameTitle">Flash Games</h1>
@@ -18,13 +21,11 @@
             window.addEventListener('load', function() {
                 var ben10Container = document.getElementById('ben10');
                 if (window.RufflePlayer) {
-                    // Use Ruffle to load the game
                     var ruffle = window.RufflePlayer.newest();
                     var player = ruffle.createPlayer();
                     ben10Container.appendChild(player);
                     player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf");
                 } else {
-                    // Fallback to Flash if Ruffle is not available
                     ben10Container.innerHTML = `
                         <object type="application/x-shockwave-flash" data="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf" width="800" height="600">
                             <param name="movie" value="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf">
@@ -44,13 +45,11 @@
             window.addEventListener('load', function() {
                 var animeBattleContainer = document.getElementById('animebattle');
                 if (window.RufflePlayer) {
-                    // Use Ruffle to load the game
                     var ruffle = window.RufflePlayer.newest();
                     var player = ruffle.createPlayer();
                     animeBattleContainer.appendChild(player);
                     player.load("https://w8.snokido.com/games/flash/anime-battle-2/game.swf");
                 } else {
-                    // Fallback to Flash if Ruffle is not available
                     animeBattleContainer.innerHTML = `
                         <object type="application/x-shockwave-flash" data="https://w8.snokido.com/games/flash/anime-battle-2/game.swf" width="800" height="600">
                             <param name="movie" value="https://w8.snokido.com/games/flash/anime-battle-2/game.swf">
@@ -70,13 +69,11 @@
             window.addEventListener('load', function() {
                 var dbzDevolutionContainer = document.getElementById('dbzDevolution');
                 if (window.RufflePlayer) {
-                    // Use Ruffle to load the game
                     var ruffle = window.RufflePlayer.newest();
                     var player = ruffle.createPlayer();
                     dbzDevolutionContainer.appendChild(player);
                     player.load("https://www.newgrounds.com/portal/view/590695");  <!-- Replace with correct URL for DBZ Devolution -->
                 } else {
-                    // Fallback to Flash if Ruffle is not available
                     dbzDevolutionContainer.innerHTML = `
                         <object type="application/x-shockwave-flash" data="https://www.newgrounds.com/portal/view/590695" width="800" height="600">
                             <param name="movie" value="https://www.newgrounds.com/portal/view/590695">
@@ -97,41 +94,7 @@
         <a href="javascript:void(0)" onclick="showGame('dbzDevolution')" class="game-link">DBZ Devolution 1.2.3</a>
     </div>
 
-    <script>
-        // Function to display the selected game and update title dynamically
-        function showGame(game) {
-            // Update the title dynamically based on the selected game
-            if (game === 'ben10') {
-                document.title = "Ben 10 Galactic Champions"; // Update the browser tab title
-                document.getElementById('gameTitle').textContent = "Ben 10 Galactic Champions : Arabic edition"; // Update game title on page
-            } else if (game === 'animebattle') {
-                document.title = "Anime Battle 2.2"; // Update the browser tab title
-                document.getElementById('gameTitle').textContent = "Anime Battle 2.2"; // Update game title on page
-            } else if (game === 'dbzDevolution') {
-                document.title = "DBZ Devolution 1.2.3"; // Update the browser tab title
-                document.getElementById('gameTitle').textContent = "DBZ Devolution 1.2.3"; // Update game title on page
-            }
-
-            // Hide all games
-            document.getElementById('ben10').classList.remove('active');
-            document.getElementById('animebattle').classList.remove('active');
-            document.getElementById('dbzDevolution').classList.remove('active');
-
-            // Show the selected game
-            if (game === 'ben10') {
-                document.getElementById('ben10').classList.add('active');
-            } else if (game === 'animebattle') {
-                document.getElementById('animebattle').classList.add('active');
-            } else if (game === 'dbzDevolution') {
-                document.getElementById('dbzDevolution').classList.add('active');
-            }
-        }
-
-        // Show the Ben 10 game by default when the page loads
-        window.onload = function() {
-            showGame('ben10');
-        };
-    </script>
-
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
