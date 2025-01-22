@@ -50,8 +50,8 @@ body.light {
 /* Game Container Styling */
 .game-container {
     display: none;
-    width: 800px;
-    height: 600px;
+    width: 600px;
+    height: 570px;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
