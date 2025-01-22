@@ -1,96 +1,82 @@
 /* Basic Reset */
-body, h1, h2, p, nav, a {
+body, h1, p, a {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
-/* Full control over body height and width */
+/* General Body Styling */
 body {
-    background-color: #121212; /* Dark background */
-    color: #fff; /* White text */
+    background-color: #121212;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw; /* Full width of the viewport */
-    height: 120vh; /* Full height of the viewport */
-    padding: 20px; /* Padding around the body */
-    text-align: center;
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
+    height: 100vh;
+    overflow-y: auto;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-/* Mode Toggle Icon */
-.mode-toggle {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 32px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+/* Light mode styling */
+body.light {
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.mode-toggle:hover {
-    transform: scale(1.2); /* Scale the icon on hover */
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
 }
 
-/* Fancy and glowing main title */
 #gameTitle {
     font-size: 40px;
     font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
-    transition: text-shadow 0.3s ease-in-out;
-    margin-bottom: 20px;
-    position: relative;
-    top: 10px; /* Move the title slightly down from the top */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-#gameTitle:hover {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1); /* Stronger glow on hover */
+.mode-toggle {
+    cursor: pointer;
 }
 
-/* Game container with smooth, curved frame */
+.mode-toggle span {
+    font-size: 30px;
+}
+
+/* Game Container Styling */
 .game-container {
-    width: 550px; /* Increased width */
-    height: 400px; /* Increased height */
-    background-color: #333; /* Darker background for game container */
-    border: 12px solid #ffcc00; /* Gold border */
-    border-radius: 20px; /* Curved corners */
-    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7); /* Soft glowing border */
-    padding: 15px;
-    margin: 20px; /* Space between the containers */
-    display: none; /* Hide by default */
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease; /* Smooth effect on hover */
+    display: none;
+    width: 800px;
+    height: 600px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    background-color: #333;
 }
 
-.game-container:hover {
-    box-shadow: 0 0 50px rgba(255, 255, 0, 1); /* Stronger glowing effect on hover */
+.game-container object {
+    width: 100%;
+    height: 100%;
 }
 
-/* Display active game */
-.active {
-    display: block;
-}
-
-/* Fancy and glowing game names links */
+/* Game Links Styling */
 .game-names {
     margin-top: 30px;
-    position: relative;
-    top: 20px; /* Position the game names below the game containers */
 }
 
 .game-link {
-    display: block; /* Make the links block elements */
+    display: block;
     font-size: 24px;
-    color: #ffffff; /* White color for game names */
+    color: #fff;
     text-decoration: none;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
-    transition: text-shadow 0.4s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .game-link:hover {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1); /* Stronger glow on hover */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
