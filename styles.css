@@ -1,81 +1,100 @@
-/* Basic Reset */
-body, h1, h2, p, nav, a {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script> <!-- Ruffle player for Flash support -->
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
 
-/* Full control over body height and width */
-body {
-    background-color: #121212; /* Dark background */
-    color: #fff; /* White text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw; /* Full width of the viewport */
-    height: 120vh; /* Full height of the viewport */
-    padding: 20px; /* Padding around the body */
-    text-align: center;
-    overflow-y: auto; /* Allow scrolling if content overflows */
-}
+    <!-- Dark/Light Mode Toggle Icon -->
+    <div id="modeToggle" class="mode-toggle" onclick="toggleMode()">🌙</div>
 
-/* Fancy and glowing main title */
-#gameTitle {
-    font-size: 40px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
-    transition: text-shadow 0.3s ease-in-out;
-    margin-bottom: 20px;
-    position: relative;
-    top: 10px; /* Move the title slightly down from the top */
-}
+    <!-- Dynamic Title for the game -->
+    <h1 id="gameTitle">Flash Games</h1>
 
-#gameTitle:hover {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1); /* Stronger glow on hover */
-}
+    <!-- Game 1: Ben 10 -->
+    <div id="ben10" class="game-container">
+        <script>
+            window.addEventListener('load', function() {
+                var ben10Container = document.getElementById('ben10');
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    ben10Container.appendChild(player);
+                    player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf");
+                } else {
+                    ben10Container.innerHTML = `
+                        <object type="application/x-shockwave-flash" data="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf" width="800" height="600">
+                            <param name="movie" value="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#ffffff">
+                            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                        </object>
+                    `;
+                }
+            });
+        </script>
+    </div>
 
-/* Game container with smooth, curved frame */
-.game-container {
-    width: 550px; /* Increased width */
-    height: 400px; /* Increased height */
-    background-color: #333; /* Darker background for game container */
-    border: 12px solid #ffcc00; /* Gold border */
-    border-radius: 20px; /* Curved corners */
-    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7); /* Soft glowing border */
-    padding: 15px;
-    margin: 20px; /* Space between the containers */
-    display: none; /* Hide by default */
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease; /* Smooth effect on hover */
-}
+    <!-- Game 2: Anime Battle 2.2 -->
+    <div id="animebattle" class="game-container">
+        <script>
+            window.addEventListener('load', function() {
+                var animeBattleContainer = document.getElementById('animebattle');
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    animeBattleContainer.appendChild(player);
+                    player.load("https://w8.snokido.com/games/flash/anime-battle-2/game.swf");
+                } else {
+                    animeBattleContainer.innerHTML = `
+                        <object type="application/x-shockwave-flash" data="https://w8.snokido.com/games/flash/anime-battle-2/game.swf" width="800" height="600">
+                            <param name="movie" value="https://w8.snokido.com/games/flash/anime-battle-2/game.swf">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#ffffff">
+                            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                        </object>
+                    `;
+                }
+            });
+        </script>
+    </div>
 
-.game-container:hover {
-    box-shadow: 0 0 50px rgba(255, 255, 0, 1); /* Stronger glowing effect on hover */
-}
+    <!-- Game 3: DBZ Devolution 1.2.3 -->
+    <div id="dbzDevolution" class="game-container">
+        <script>
+            window.addEventListener('load', function() {
+                var dbzDevolutionContainer = document.getElementById('dbzDevolution');
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    dbzDevolutionContainer.appendChild(player);
+                    player.load("https://www.newgrounds.com/portal/view/590695");  <!-- Replace with correct URL for DBZ Devolution -->
+                } else {
+                    dbzDevolutionContainer.innerHTML = `
+                        <object type="application/x-shockwave-flash" data="https://www.newgrounds.com/portal/view/590695" width="800" height="600">
+                            <param name="movie" value="https://www.newgrounds.com/portal/view/590695">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#ffffff">
+                            Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                        </object>
+                    `;
+                }
+            });
+        </script>
+    </div>
 
-/* Display active game */
-.active {
-    display: block;
-}
+    <!-- Game names with links below -->
+    <div class="game-names">
+        <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions : Arabic edition</a>
+        <a href="javascript:void(0)" onclick="showGame('animebattle')" class="game-link">Anime Battle 2.2</a>
+        <a href="javascript:void(0)" onclick="showGame('dbzDevolution')" class="game-link">DBZ Devolution 1.2.3</a>
+    </div>
 
-/* Fancy and glowing game names links */
-.game-names {
-    margin-top: 30px;
-    position: relative;
-    top: 20px; /* Position the game names below the game containers */
-}
-
-.game-link {
-    display: block; /* Make the links block elements */
-    font-size: 24px;
-    color: #ffffff; /* White color for game names */
-    text-decoration: none;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
-    transition: text-shadow 0.4s ease-in-out;
-}
-
-.game-link:hover {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1); /* Stronger glow on hover */
-}
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
