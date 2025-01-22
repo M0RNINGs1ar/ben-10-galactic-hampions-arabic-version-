@@ -2,7 +2,7 @@
 function showGame(game) {
     // Update the title dynamically based on the selected game
     if (game === 'ben10') {
-        document.title = "Ben 10 Galactic Champions";
+        document.title = "Ben 10 Galactic Champions"; 
         document.getElementById('gameTitle').textContent = "Ben 10 Galactic Champions";
     } else if (game === 'animebattle') {
         document.title = "Anime Battle 2.2";
@@ -12,13 +12,13 @@ function showGame(game) {
         document.getElementById('gameTitle').textContent = "DBZ Devolution";
     }
 
-    // Hide all games first
-    document.getElementById('ben10').style.visibility = 'hidden';
-    document.getElementById('animebattle').style.visibility = 'hidden';
-    document.getElementById('dbzDevolution').style.visibility = 'hidden';
+    // Hide all games and show the selected game
+    document.getElementById('ben10').style.display = 'none';
+    document.getElementById('animebattle').style.display = 'none';
+    document.getElementById('dbzDevolution').style.display = 'none';
 
-    // Then show the selected game
-    document.getElementById(game).style.visibility = 'visible';
+    // Display the selected game
+    document.getElementById(game).style.display = 'block';
 }
 
 // Show the Ben 10 game by default when the page loads
@@ -33,8 +33,8 @@ document.getElementById('modeToggle').addEventListener('click', function() {
 
     const modeIcon = document.getElementById('modeIcon');
     if (document.body.classList.contains('dark')) {
-        modeIcon.src = 'https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/dark%20mode.svg?raw=true';
+        modeIcon.textContent = '🌙';  // Dark mode icon
     } else {
-        modeIcon.src = 'https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/light%20mode.svg?raw=true';
+        modeIcon.textContent = '🌞';  // Light mode icon
     }
-});
+};
