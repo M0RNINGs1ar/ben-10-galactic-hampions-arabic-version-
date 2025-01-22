@@ -13,40 +13,40 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 120vh;
-    padding: 20px;
+    width: 100vw; /* Full width of the viewport */
+    height: 120vh; /* Full height of the viewport */
+    padding: 20px; /* Padding around the body */
     text-align: center;
-    overflow-y: auto;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition between dark and light modes */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Light mode */
+/* Light Mode Styling */
 body.light {
-    background-color: #fff;
-    color: #000;
+    background-color: #ffffff;
+    color: #121212;
 }
 
-/* Fancy and glowing main title */
+/* Dark Mode Styling */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Title Styling */
 #gameTitle {
     font-size: 40px;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
-    transition: text-shadow 0.3s ease-in-out;
     margin-bottom: 20px;
-    position: relative;
-    top: 10px;
-}
-
-#gameTitle:hover {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1);
+    transition: text-shadow 0.3s ease;
 }
 
 /* Game container with smooth, curved frame */
 .game-container {
-    width: 200px;
-    height: 350px;
+    width: 550px;
+    height: 400px;
     background-color: #333;
     border: 12px solid #ffcc00;
     border-radius: 20px;
@@ -85,33 +85,17 @@ body.light {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1);
 }
 
-/* Dark/Light Mode Button Styling */
+/* Dark/Light mode toggle button styling */
 .mode-toggle {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
-    background-color: transparent;
-    border: none;
     cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.mode-toggle:hover {
-    transform: scale(1.1);
 }
 
 .mode-toggle img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    transition: filter 0.3s;
-}
-
-.mode-toggle img:hover {
-    filter: brightness(1.3);
-}
-
-/* Change game link text color to black in light mode */
-body.light .game-link {
-    color: #000;
+    transition: all 0.3s ease;
 }
