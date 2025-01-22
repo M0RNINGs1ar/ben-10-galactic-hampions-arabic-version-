@@ -72,7 +72,7 @@
                     var ruffle = window.RufflePlayer.newest();
                     var player = ruffle.createPlayer();
                     dbzDevolutionContainer.appendChild(player);
-                    player.load("https://www.newgrounds.com/portal/view/590695");  <!-- Replace with correct URL for DBZ Devolution -->
+                    player.load("https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf");  <!-- Replace with correct URL for DBZ Devolution -->
                 } else {
                     dbzDevolutionContainer.innerHTML = `
                         <object type="application/x-shockwave-flash" data="https://www.newgrounds.com/portal/view/590695" width="800" height="600">
