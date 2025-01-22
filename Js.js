@@ -1,35 +1,40 @@
-// Dark/Light mode toggle function
-function toggleMode() {
-    const currentMode = document.body.style.backgroundColor === "rgb(18, 18, 18)" ? "light" : "dark";
-    
-    if (currentMode === "dark") {
-        document.body.style.backgroundColor = "#f9f9f9"; // Light mode background
-        document.body.style.color = "#333"; // Light mode text
-        document.getElementById("modeToggle").textContent = "🌙"; // Moon icon
-    } else {
-        document.body.style.backgroundColor = "#121212"; // Dark mode background
-        document.body.style.color = "#fff"; // Dark mode text
-        document.getElementById("modeToggle").textContent = "🌞"; // Sun icon
-    }
-}
-
 // Function to display the selected game and update title dynamically
 function showGame(game) {
     // Update the title dynamically based on the selected game
     if (game === 'ben10') {
-        document.title = "Ben 10 Galactic Champions";
+        document.title = "Ben 10 Galactic Champions"; 
+        document.getElementById('gameTitle').textContent = "Ben 10 Galactic Champions";
     } else if (game === 'animebattle') {
         document.title = "Anime Battle 2.2";
+        document.getElementById('gameTitle').textContent = "Anime Battle 2.2";
     } else if (game === 'dbzDevolution') {
-        document.title = "DBZ Devolution 1.2.3";
+        document.title = "DBZ Devolution";
+        document.getElementById('gameTitle').textContent = "DBZ Devolution";
     }
 
-    // Hide all game containers
-    const games = document.querySelectorAll('.game-container');
-    games.forEach(gameContainer => {
-        gameContainer.classList.remove('active');
-    });
+    // Hide all games and show the selected game
+    document.getElementById('ben10').style.display = 'none';
+    document.getElementById('animebattle').style.display = 'none';
+    document.getElementById('dbzDevolution').style.display = 'none';
 
-    // Show the selected game container
-    document.getElementById(game).classList.add('active');
+    // Display the selected game
+    document.getElementById(game).style.display = 'block';
 }
+
+// Show the Ben 10 game by default when the page loads
+window.onload = function() {
+    showGame('ben10');
+};
+
+// Dark/Light mode toggle functionality
+document.getElementById('modeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+
+    const modeIcon = document.getElementById('modeIcon');
+    if (document.body.classList.contains('dark')) {
+        modeIcon.textContent = '🌙';  // Dark mode icon
+    } else {
+        modeIcon.textContent = '🌞';  // Light mode icon
+    }
+};
