@@ -53,17 +53,13 @@ body.dark {
     box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
     padding: 15px;
     margin: 20px;
-    display: none;
+    visibility: hidden; /* Hide by default */
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
-}
-
-.game-container:hover {
-    box-shadow: 0 0 50px rgba(255, 255, 0, 1);
 }
 
 /* Display active game */
 .active {
-    display: block;
+    visibility: visible;
 }
 
 /* Fancy and glowing game names links */
