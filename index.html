@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script> <!-- Ruffle player for Flash support -->
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <title>Flash Games</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
-
-    <!-- Dark/Light Mode Toggle Icon -->
-    <div id="modeToggle" class="mode-toggle" onclick="toggleMode()">🌙</div>
-
-    <!-- Dynamic Title for the game -->
-    <h1 id="gameTitle">Flash Games</h1>
+    <!-- Header with Dark/Light Mode Toggle Icon -->
+    <div class="header">
+        <h1 id="gameTitle">Flash Games</h1>
+        <div class="mode-toggle" id="modeToggle">
+            <span id="modeIcon">🌙</span>
+        </div>
+    </div>
 
     <!-- Game 1: Ben 10 -->
     <div id="ben10" class="game-container">
@@ -63,7 +64,7 @@
         </script>
     </div>
 
-    <!-- Game 3: DBZ Devolution 1.2.3 -->
+    <!-- Game 3: DBZ Devolution -->
     <div id="dbzDevolution" class="game-container">
         <script>
             window.addEventListener('load', function() {
@@ -89,12 +90,50 @@
 
     <!-- Game names with links below -->
     <div class="game-names">
-        <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions : Arabic edition</a>
+        <a href="javascript:void(0)" onclick="showGame('ben10')" class="game-link">Ben 10 Galactic Champions</a>
         <a href="javascript:void(0)" onclick="showGame('animebattle')" class="game-link">Anime Battle 2.2</a>
-        <a href="javascript:void(0)" onclick="showGame('dbzDevolution')" class="game-link">DBZ Devolution 1.2.3</a>
+        <a href="javascript:void(0)" onclick="showGame('dbzDevolution')" class="game-link">DBZ Devolution</a>
     </div>
 
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <script>
+        // Function to display the selected game
+        function showGame(game) {
+            if (game === 'ben10') {
+                document.title = "Ben 10 Galactic Champions"; 
+                document.getElementById('gameTitle').textContent = "Ben 10 Galactic Champions";
+            } else if (game === 'animebattle') {
+                document.title = "Anime Battle 2.2";
+                document.getElementById('gameTitle').textContent = "Anime Battle 2.2";
+            } else if (game === 'dbzDevolution') {
+                document.title = "DBZ Devolution";
+                document.getElementById('gameTitle').textContent = "DBZ Devolution";
+            }
+
+            // Hide all games and show the selected game
+            document.getElementById('ben10').style.display = 'none';
+            document.getElementById('animebattle').style.display = 'none';
+            document.getElementById('dbzDevolution').style.display = 'none';
+
+            document.getElementById(game).style.display = 'block';
+        }
+
+        // Show the Ben 10 game by default
+        window.onload = function() {
+            showGame('ben10');
+        };
+
+        // Dark/Light mode toggle functionality
+        document.getElementById('modeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+
+            const modeIcon = document.getElementById('modeIcon');
+            if (document.body.classList.contains('dark')) {
+                modeIcon.textContent = '🌙';  // Dark mode icon
+            } else {
+                modeIcon.textContent = '🌞';  // Light mode icon
+            }
+        });
+    </script>
 </body>
 </html>
