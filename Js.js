@@ -28,8 +28,8 @@ function showGame(game) {
 function loadGame(game) {
     var container = document.getElementById(game).getElementsByClassName('game-player')[0];
     if (game === 'ben10' && !container.innerHTML) {
-        container.innerHTML = `<object type="application/x-shockwave-flash" data="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf" width="800" height="600">
-                                <param name="movie" value="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf">
+        container.innerHTML = `<object type="application/x-shockwave-flash" data="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf?raw=true" width="800" height="600">
+                                <param name="movie" value="https://github.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/blob/main/F45XC3A44ZCE.swf?raw=true">
                                 <param name="quality" value="high">
                                 <param name="bgcolor" value="#ffffff">
                                 Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
