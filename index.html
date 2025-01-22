@@ -17,12 +17,16 @@
         <script>
             window.addEventListener('load', function() {
                 var ben10Container = document.getElementById('ben10');
-                var ruffle = window.RufflePlayer.newest();
-                var player = ruffle.createPlayer();
-                ben10Container.appendChild(player);
-
-                // Load the Ben 10 SWF game
-                player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf");
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    ben10Container.appendChild(player);
+                    // Load the Ben 10 SWF game using Ruffle
+                    player.load("https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf");
+                } else {
+                    // Flash fallback (this would only work if Flash is enabled, which most browsers no longer support)
+                    ben10Container.innerHTML = '<object type="application/x-shockwave-flash" data="https://m0rnings1ar.github.io/ben-10-galactic-hampions-arabic-version-/game.swf" width="800" height="600"></object>';
+                }
             });
         </script>
     </div>
@@ -32,12 +36,16 @@
         <script>
             window.addEventListener('load', function() {
                 var animeBattleContainer = document.getElementById('animebattle');
-                var ruffle = window.RufflePlayer.newest();
-                var player = ruffle.createPlayer();
-                animeBattleContainer.appendChild(player);
-
-                // Load the Anime Battle 2.2 SWF game from the provided URL
-                player.load("https://w8.snokido.com/games/flash/anime-battle-2/game.swf");
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    animeBattleContainer.appendChild(player);
+                    // Load the Anime Battle 2.2 SWF game using Ruffle
+                    player.load("https://w8.snokido.com/games/flash/anime-battle-2/game.swf");
+                } else {
+                    // Flash fallback
+                    animeBattleContainer.innerHTML = '<object type="application/x-shockwave-flash" data="https://w8.snokido.com/games/flash/anime-battle-2/game.swf" width="800" height="600"></object>';
+                }
             });
         </script>
     </div>
@@ -47,12 +55,16 @@
         <script>
             window.addEventListener('load', function() {
                 var dbzDevolutionContainer = document.getElementById('dbzDevolution');
-                var ruffle = window.RufflePlayer.newest();
-                var player = ruffle.createPlayer();
-                dbzDevolutionContainer.appendChild(player);
-
-                // Load the DBZ Devolution SWF game from the provided URL
-                player.load("https://www.newgrounds.com/portal/view/590695");  <!-- Replace this URL with the correct URL for DBZ Devolution -->
+                if (window.RufflePlayer) {
+                    var ruffle = window.RufflePlayer.newest();
+                    var player = ruffle.createPlayer();
+                    dbzDevolutionContainer.appendChild(player);
+                    // Load the DBZ Devolution SWF game using Ruffle
+                    player.load("https://www.newgrounds.com/portal/view/590695");  <!-- Replace with correct URL for DBZ Devolution -->
+                } else {
+                    // Flash fallback
+                    dbzDevolutionContainer.innerHTML = '<object type="application/x-shockwave-flash" data="https://www.newgrounds.com/portal/view/590695" width="800" height="600"></object>';
+                }
             });
         </script>
     </div>
