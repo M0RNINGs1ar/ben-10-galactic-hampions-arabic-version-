@@ -1,69 +1,72 @@
 /* Basic Reset */
-body, h1, p, a {
+body, h1, h2, p, nav, a {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
-/* General Body Styling */
+/* Full control over body height and width */
 body {
-    background-color: #121212;
-    color: #fff;
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    overflow-y: auto;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-/* Light mode styling */
-body.light {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-/* Header Styling */
-.header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
+    width: 100vw;
+    height: 120vh;
     padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition between dark and light modes */
 }
 
+/* Light mode */
+body.light {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Fancy and glowing main title */
 #gameTitle {
     font-size: 40px;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: text-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
 }
 
-.mode-toggle {
-    cursor: pointer;
+#gameTitle:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1);
 }
 
-.mode-toggle span {
-    font-size: 30px;
-}
-
-/* Game Container Styling */
+/* Game container with smooth, curved frame */
 .game-container {
-    display: none;
-    width: 800px;
-    height: 600px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    width: 550px;
+    height: 400px;
     background-color: #333;
+    border: 12px solid #ffcc00;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
+    padding: 15px;
+    margin: 20px;
+    display: none;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
 }
 
-.game-container object {
-    width: 100%;
-    height: 100%;
+.game-container:hover {
+    box-shadow: 0 0 50px rgba(255, 255, 0, 1);
 }
 
-/* Game Links Styling */
+/* Display active game */
+.active {
+    display: block;
+}
+
+/* Fancy and glowing game names links */
 .game-names {
     margin-top: 30px;
 }
@@ -71,12 +74,44 @@ body.light {
 .game-link {
     display: block;
     font-size: 24px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: text-shadow 0.4s ease-in-out;
 }
 
 .game-link:hover {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 1);
+}
+
+/* Dark/Light Mode Button Styling */
+.mode-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+.mode-toggle img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: filter 0.3s;
+}
+
+.mode-toggle img:hover {
+    filter: brightness(1.3);
+}
+
+/* Change game link text color to black in light mode */
+body.light .game-link {
+    color: #000;
 }
