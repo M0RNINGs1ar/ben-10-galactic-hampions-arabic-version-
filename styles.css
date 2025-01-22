@@ -13,11 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw; /* Full width of the viewport */
-    height: 120vh; /* Full height of the viewport */
-    padding: 20px; /* Padding around the body */
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
     text-align: center;
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    overflow-y: auto;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -53,7 +53,7 @@ body.dark {
     box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
     padding: 15px;
     margin: 20px;
-    visibility: hidden; /* Hide by default */
+    visibility: hidden;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
 }
 
