@@ -51,8 +51,9 @@ body.light {
 .game-container {
     display: none;
     width: 570px;
-    height: 450px;
-    margin: auto;
+    height: 430px;
+    padding: 10px;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     background-color: #333;
