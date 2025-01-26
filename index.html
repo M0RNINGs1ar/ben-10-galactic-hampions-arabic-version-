@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,30 @@
     <title>Games</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <style>
+        /* Basic styles to ensure game containers are hidden/shown correctly */
+        .game-container {
+            display: none; /* Hide all games by default */
+        }
+
+        .game-container.active {
+            display: block; /* Show the active game */
+        }
+
+        /* Style for the links to make it clear they are clickable */
+        .game-link {
+            font-size: 18px;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .game-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
