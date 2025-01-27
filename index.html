@@ -62,26 +62,24 @@ v<!DOCTYPE html>
         </script>
     </div>
 
-    <!-- Game 2: Anime Battle 2.2 -->
     <div id="animebattle" class="game-container">
-        <script>
-            window.addEventListener('load', function() {
-                var animeBattleContainer = document.getElementById('animebattle');
-                
-                // Using Flash Player directly for Anime Battle game
-                animeBattleContainer.innerHTML = `
-                    <object type="application/x-shockwave-flash" data="https://raw.githubusercontent.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/main/bmmLoader.swf
-" width="800" height="600">
-                        <param name="movie" value="https://raw.githubusercontent.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/main/bmmLoader.swf
-">
-                        <param name="quality" value="high">
-                        <param name="bgcolor" value="#ffffff">
-                        Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
-                    </object>
-                `;
-            });
-        </script>
-    </div>
+     <script>
+         window.addEventListener('load', function() {
+             var animeBattleContainer = document.getElementById('animebattle');
+             
+             // Correct URL for SWF file
+             animeBattleContainer.innerHTML = `
+                 <object type="application/x-shockwave-flash" data="https://raw.githubusercontent.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/main/bmmLoader.swf" width="800" height="600">
+                     <param name="movie" value="https://raw.githubusercontent.com/M0RNINGs1ar/ben-10-galactic-hampions-arabic-version-/main/bmmLoader.swf">
+                     <param name="quality" value="high">
+                     <param name="bgcolor" value="#ffffff">
+                     Your browser does not support Flash. <a href="https://get.adobe.com/flashplayer/" target="_blank">Get Flash Player</a> to play the game.
+                 </object>
+             `;
+         });
+     </script>
+ </div>
+
 
     <!-- Game 3: DBZ Devolution 1.2.3 -->
     <div id="dbzDevolution" class="game-container">
