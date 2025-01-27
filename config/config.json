@@ -2645,6 +2645,7 @@
 			{"type":"alien", "id":"Insectoid","price":200,"lvl":1},
 			{"type":"alien", "id":"Nosedeenian","price":200,"lvl":1},
 			{"type":"alien", "id":"Splixson","price":200,"lvl":1},
+			{"type":"alien", "id":"Transylian","price":200,"lvl":1},
             {"type":"alien", "id":"Aracnochimpance","price":300,"lvl":5},
          
             {"type":"alien", "id":"Pyronite","price":900,"lvl":10},			
